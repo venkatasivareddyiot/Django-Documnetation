@@ -26,3 +26,5 @@ myfirstproject/
         asgi.py
         wsgi.py
         ```
+        
+  Flow
