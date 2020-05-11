@@ -25,7 +25,6 @@ myfirstproject/
         urls.py
         asgi.py
         wsgi.py
-        ```
-        
-  <img src="django flow.png" alt="flow structure"/>
+```
+<img src="django flow.png" alt="flow structure"/>
 
