@@ -27,4 +27,5 @@ myfirstproject/
         wsgi.py
         ```
         
-  Flow
+  <img src="django flow.png" alt="flow structure"/>
+
