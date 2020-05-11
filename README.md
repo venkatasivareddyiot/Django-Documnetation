@@ -1,6 +1,6 @@
 ## Django - Documentation
 ![GitHub Logo](https://dl1.cbsistatic.com/i/2019/10/25/3d1ad463-d007-4220-bba7-f22588292444/c1d0cff614ceb63ac7bbf23f9323d189/imgingest-7008501752514407747.png)
- For installing Django in your pc you need to type blow comand in Command prompt
+ For installing Django in your pc you need to type below command in Command prompt
  ```python 
  pip install Django==3.0.6
  ```
@@ -19,7 +19,7 @@ $ python -m django --version
 ```python
 myfirstproject/
     manage.py
-    mysite/
+    myfirstproject/
         __init__.py
         settings.py
         urls.py
