@@ -1,2 +1,2 @@
 # Django-Documnetation
-Its all about Django Documentation
+## Use of Admin App
