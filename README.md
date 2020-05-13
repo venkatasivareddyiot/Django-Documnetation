@@ -70,7 +70,7 @@
   * **Download sublimetext or any other editor tools for editing purpose.**.[Download Link](https://www.sublimetext.com/3)
   * ceck wheather 'pip' is working or not in the 'cmd'
   
-  <img src='pip.PNG' alt='pip' />
+  <img src='pip.png' alt='pip' />
   
   * install django # # (latest Version 3.0) wait for installation
   * if you want perticular version then try `pip install Django==3.0.1"` or 
@@ -93,9 +93,9 @@
 * Now, to create a Project in spcefied folder where to do and now open cmd in same path :
 	```
 			   path		                   creating project
-	    D:\Satheesh\MyPractice>django-admin startproject College(projectname)
-	    D:\Satheesh\MyPractice>cd College
-	    D:\Satheesh\MyPractice\College
+	    D:\Shiva-Venkat\MyPractice>django-admin startproject myproject(projectname)
+	    D:\Shiva-Venkat\MyPractice>cd myproject
+	    D:\Shiva-Venkat\MyPractice\myproject
 	    
 <img src='project.PNG' alt='project' />
 	    
@@ -104,7 +104,7 @@
 * Present we are in our Django Project(College) path.
 * Check in browser wheather its working or not
   	```
-	    D:\Satheesh\MyPractice\College>python manage.py runserver
+	    D:\Satheesh\MyPractice\myproject>python manage.py runserver
 	    localhost:8000/
 	    it is localhost address --> http://127.0.0.1:8000/
 	    it worked..!
@@ -114,36 +114,36 @@
 ## **App Creation in Project**
 * Create a new App in Project
 	```
-	D:\Satheesh\MyPractice\College>python manage.py startapp appname(Students)
-	D:\Satheesh\MyPractice\College>python manage.py runserver
+	D:\Shiva-Venkat\MyPractice\myproject>python manage.py startapp appname(myapp)
+	D:\Shiva-Venkat\MyPractice\myproject>python manage.py runserver
 	localhost:8000/
 	it is localhost address --> http://127.0.0.1:8000/
 <img src='app.PNG' alt='app' />	
 
 		
 ## **urls.py :**
-* we have defaultly urls.py in  our created project(College) but we dont have urls.py in our own app so we should create new file with name urls.py in our own App(Students).
+* we have defaultly urls.py in  our created project(myproject) but we dont have urls.py in our own app so we should create new file with name urls.py in our own App(myapp).
 * Now we find the Students App in our project(College).
-* Now goto Students app folder and create "urls.py" file and add like this
+* Now goto myapp folder and create "urls.py" file and add like this
 
   	```
 	from django.urls import path
-	from Students import views
+	from myapp import views
 	urlpatterns=[
 		path('index/',views.index,name="index"),
 
 	]
 
-> _NOTE:_ here i am importing views from Students app and mentioned one path because,if we browse localhost:8000/Students/index then it goes to views part index function and gives return template as a output. 
+> _NOTE:_ here i am importing views from myapp and mentioned one path because,if we browse localhost:8000/myapp/index then it goes to views part index function and gives return template as a output. 
 
-* goto (Students/views.py file) Students folder open views.py file and add like this.
+* goto (myapp/views.py file) myapp folder open views.py file and add like this.
 	```
 		
 	from django.shortcuts import render
 	from django.http import HttpResponse
 	def index(request):
 			return HttpResponse("<h2>Hello World</h2>")
-* Create a function index in the views.py file. This function will be mapped from the Students/urls.py file.
+* Create a function index in the views.py file. This function will be mapped from the myapp/urls.py file.
 
 > **_NOTE:_** import HttpResponse from http package and defining the function index.
 
@@ -155,10 +155,10 @@
 	
 		from django.contrib import admin
 		from django.urls import path,include
-		from appname(Students) import views
+		from appname(myapp) import views
 		urlpatterns = [
 	   		path('admin/', admin.site.urls),
-			path('Students/',include('Students.urls'))
+			path('myapp/',include('myapp.urls'))
 			]
 
 * here we are importing the include because all the app urls are need to include in project urls.py file,so we are import include and giving path for browser.
