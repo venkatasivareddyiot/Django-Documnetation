@@ -70,7 +70,7 @@
   * **Download sublimetext or any other editor tools for editing purpose.**.[Download Link](https://www.sublimetext.com/3)
   * ceck wheather 'pip' is working or not in the 'cmd'
   
-  <img src='pip.png' alt='pip' />
+  <img src='pip.PNG' alt='pip' />
   
   * install django # # (latest Version 3.0) wait for installation
   * if you want perticular version then try `pip install Django==3.0.1"` or 
