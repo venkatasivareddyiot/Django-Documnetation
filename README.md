@@ -63,9 +63,10 @@ url mappings is done by two types
 Adding urls to urls.py file in project which is main urls file
 by importing views from views.py file from app folder
 <img src="urls.py 1st version.JPG" alt="By importing"/>
+
 for urls mapping in import format, we need to import all views from myapp(created app name) to the main url.py file
 ```python 
-from myapp import views 
+from app import views 
 ```
 by doing this all the methods from views files will be imported to the main URLs file
 and in URLs patterns, we need to add every method that we are going to use in views
@@ -76,7 +77,7 @@ path('index/',views.index,name="index"),
 form above  **'index/'**   is the url name and  in **views.index** index is the method name in views file in myapp **name: "index"** index is the name  
 
 in views file
-##add an image of views file here##
+<img src="views.JPG" alt="Views.py"/>
 we need to define a method for index when user type */index/* we need to return *Http response* for this we need to import HTTP response library
 ```pyhon
 from Django.http import HttpResponse
