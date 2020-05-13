@@ -62,7 +62,7 @@ url mappings is done by two types
 ##### By Importing
 Adding urls to urls.py file in project which is main urls file
 by importing views from views.py file from app folder
-##add an image here
+<img src="urls.py 1st version.JPG" alt="By importing"/>
 for urls mapping in import format, we need to import all views from myapp(created app name) to the main url.py file
 ```python 
 from myapp import views 
