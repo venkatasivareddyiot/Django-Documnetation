@@ -62,6 +62,7 @@ url mappings is done by two types
 ##### By Importing
 Adding urls to urls.py file in project which is main urls file
 by importing views from views.py file from app folder
+
 <img src="urls.py 1st version.JPG" alt="By importing"/>
 
 for urls mapping in import format, we need to import all views from myapp(created app name) to the main url.py file
@@ -74,10 +75,10 @@ by the name of path
 ``` python 
 path('index/',views.index,name="index"),
 ```
-form above  **'index/'**   is the url name and  in **views.index** index is the method name in views file in myapp **name: "index"** index is the name  
+form above  **'index/'**   is the url name and  in **views.index** index is the method name in views file in myapp **name: "index"** index is the name  in views file
 
-in views file
 <img src="views.JPG" alt="Views.py"/>
+
 we need to define a method for index when user type */index/* we need to return *Http response* for this we need to import HTTP response library
 ```pyhon
 from Django.http import HttpResponse
@@ -96,7 +97,8 @@ and we need to write a urls.py file inside the myapp
 ```python
 from django.urls import path,include
 ```
-###add image###
+<img src="urls.py 2nd version.JPG" alt="main urls.py"/>
+
 we can link up all the the urls from urls.py file inside the my app by using
 ```python
  path('myapp/',include('myapp.urls')),
@@ -110,15 +112,16 @@ we need to link up all the methods in views so that we need to import them in ur
 from django.urls import path
 from myapp import views
 ```
-###add image here###
+<img src="urls.py myapp.JPG" alt="sub urls.py"/>
+
 then define paths 
 ``` python 
 path('index/',views.index,name="index"),
 ```
-form above  **'index/'**   is the url name and  in **views.index** index is the method name in views file in myapp **name: "index"** index is the name  
+form above  **'index/'**   is the url name and  in **views.index** index is the method name in views file in myapp **name: "index"** index is the name  in views file
 
-in views file
-##add an image of views file here##
+<img src="views.JPG" alt="Views.py"/>
+
 we need to define a method for index when user type */index/* we need to return *Http response* for this we need to import HTTP response library
 ```pyhon
 from Django.http import HttpResponse
