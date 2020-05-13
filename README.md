@@ -28,3 +28,104 @@ myfirstproject/
 ```
 <img src="django flow.png" alt="flow structure"/>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Url mappings
+url mappings is done by two types
+1. By Importing
+2. By Using Include 
+##### By Importing
+Adding urls to urls.py file in project which is main urls file
+by importing views from views.py file from app folder
+##add an image here
+for urls mapping in import format, we need to import all views from myapp(created app name) to the main url.py file
+```python 
+from myapp import views 
+```
+by doing this all the methods from views files will be imported to the main URLs file
+and in URLs patterns, we need to add every method that we are going to use in views
+by the name of path
+``` python 
+path('index/',views.index,name="index"),
+```
+form above  **'index/'**   is the url name and  in **views.index** index is the method name in views file in myapp **name: "index"** index is the name  
+
+in views file
+##add an image of views file here##
+we need to define a method for index when user type */index/* we need to return *Http response* for this we need to import HTTP response library
+```pyhon
+from Django.http import HttpResponse
+```
+and then as a response, this method will  return a Http response
+
+``` python
+	def index(request):
+	return HttpResponse("Welcome to Django")
+```
+here  **index**  is the method name and **request** is Http request
+
+#### By using Include
+urls mapping is also done by using inculde we need to import include function with path
+and we need to write a urls.py file inside the myapp 
+```python
+from django.urls import path,include
+```
+###add image###
+we can link up all the the urls from urls.py file inside the my app by using
+```python
+ path('myapp/',include('myapp.urls')),
+ ```
+Here **myapp** is the app name and we are using include which includes all *urls* from myapp.urls.
+how many urls we define in ursl.py in my app will be mapped to main urls.py file 
+
+##### urls.py file in myapp
+we need to link up all the methods in views so that we need to import them in urls.py file and also the admin urls also
+``` python
+from django.urls import path
+from myapp import views
+```
+###add image here###
+then define paths 
+``` python 
+path('index/',views.index,name="index"),
+```
+form above  **'index/'**   is the url name and  in **views.index** index is the method name in views file in myapp **name: "index"** index is the name  
+
+in views file
+##add an image of views file here##
+we need to define a method for index when user type */index/* we need to return *Http response* for this we need to import HTTP response library
+```pyhon
+from Django.http import HttpResponse
+```
+and then as a response, this method will  return a Http response
+
+``` python
+	def index(request):
+	return HttpResponse("Welcome to Django")
+```
+here  **index**  is the method name and **request** is Http request
